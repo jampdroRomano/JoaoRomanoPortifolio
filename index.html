@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="assets/favicon.png" />
+    <title>João Romano - Desenvolvedor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-theme="dark">
+
+    <div id="global-particle-background"></div>
+
+    <header id="navbar">
+        <div class="logo">
+            <span data-i18n="profile_name">João Romano</span>
+        </div>
+        <nav class="nav-menu">
+            <a href="#profile" class="active" data-i18n="navbar_home">Início</a>
+            <a href="#about" data-i18n="navbar_about">Sobre</a>
+            <a href="#education" data-i18n="navbar_education">Formação</a>
+            <a href="#experience" data-i18n="navbar_experience">Experiência</a>
+            <a href="#skills" data-i18n="navbar_skills">Tecnologias</a>
+            <a href="#projects" data-i18n="navbar_projects">Projetos</a>
+            <a href="#contact" data-i18n="navbar_contact">Contato</a> 
+        </nav>
+        
+        <div class="navbar-actions">
+            <button class="icon-button" id="theme-toggle" aria-label="Alternar tema">
+                <span class="material-icons-outlined">brightness_6</span>
+            </button>
+            
+            <div class="language-selector desktop-only">
+                <button class="icon-button" id="lang-toggle" aria-label="Mudar idioma">
+                    <span class="material-icons-outlined">language</span>
+                </button>
+                <div class="lang-dropdown">
+                    <button data-lang="en">English</button>
+                    <button data-lang="pt" class="active">Português (Brasil)</button>
+                </div>
+            </div>
+
+            <button class="icon-button menu-toggle mobile-only" aria-label="Abrir menu">
+                <span class="material-icons-outlined">menu</span>
+            </button>
+        </div>
+    </header>
+
+    <nav id="mobile-menu" class="glass-card">
+        <a href="#profile" data-i18n="navbar_home">Início</a>
+        <a href="#about" data-i18n="navbar_about">Sobre</a>
+        <a href="#education" data-i18n="navbar_education">Formação</a>
+        <a href="#experience" data-i18n="navbar_experience">Experiência</a>
+        <a href="#skills" data-i18n="navbar_skills">Tecnologias</a>
+        <a href="#projects" data-i18n="navbar_projects">Projetos</a>
+        <a href="#contact" data-i18n="navbar_contact">Contato</a> 
+    </nav>
+
+    <main>
+        <section id="profile" class="section profile-hero section-bg-1">
+            <div class="content-wrapper profile-hero-content">
+                <div class="profile-text-area"> <div class="profile-role-small">
+                        <span data-i18n="profile_role">Suporte Técnico & Desenvolvimento</span>
+                    </div>
+                    <h1 class="fade-in" data-i18n="profile_name">João Romano</h1>
+                    <p class="profile-tagline fade-in" data-i18n="profile_tagline">
+                        Profissional focado em atendimento ao cliente e suporte técnico.
+                    </p>
+                    <p class="profile-description fade-in" data-i18n="profile_description">
+                        Experiência com ferramentas de CRM, análise de chamados e resolução de problemas na causa raiz. Conhecimentos em Java, C, Flutter, Git e metodologias ágeis.
+                    </p>
+                    <a href="#contact" class="contact-text-link fade-in" data-i18n="profile_contact">
+                        Entre em contato <span class="material-icons-outlined">arrow_right_alt</span>
+                    </a>
+                </div>
+                <div class="profile-image-container fade-in">
+                    <img src="assets/Screenshot 2025-06-01 210743.png" alt="João Romano" class="profile-pic">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section section-bg-2">
+            <div class="content-wrapper">
+                <div class="about-content glass-card gradient-border fade-in">
+                    <div class="about-title-flex">
+                        <span class="material-icons-outlined">person_outline</span>
+                        <h2 data-i18n="about_title">Sobre Mim</h2>
+                    </div>
+                    <p data-i18n="about_p1">Profissional com experiência em atendimento ao cliente e suporte técnico, atuando com ferramentas de CRM, análise e resolução de chamados, documentação técnica e resolução de problemas na causa raiz. Conhecimento em negociação, comunicação eficaz e trabalho em equipe.</p>
+                    <p data-i18n="about_p2">Vivência com lógica de programação, Java, C, Flutter, Protatipagem com Figma, PostgreSQL, MySQL, SQL Server, versionamento com Git/GitHub e metodologias ágeis (Scrum/Kanban). Experiência em gestão de chamados e projetos utilizando Azure DevOps e Jira.</p>
+                    <div class="tag-grid">
+                        <span class="tag-chip" data-i18n="about_tag1">🎯 Comunicação Eficaz</span>
+                        <span class="tag-chip" data-i18n="about_tag2">🤝 Trabalho em Equipe</span>
+                        <span class="tag-chip" data-i18n="about_tag3">⚙️ Resolução de Problemas</span>
+                        <span class="tag-chip" data-i18n="about_tag4">🏃 Metodologias Ágeis</span>
+                        <span class="tag-chip" data-i18n="about_tag5">💪 Resiliência</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="section section-bg-1">
+            <div class="content-wrapper">
+                <div class="section-title fade-in">
+                    <h2 data-i18n="education_title">Formação</h2>
+                    <p data-i18n="education_subtitle">Meu percurso acadêmico e profissional</p>
+                </div>
+                <div class="education-timeline fade-in">
+                    <div class="timeline-item">
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-year" data-i18n="education_1_year">2025 - 2028</span>
+                            <h3 data-i18n="education_1_title">Bacharelado em Engenharia de Software</h3>
+                            <p data-i18n="education_1_description">UNICV - Focado em arquitetura de software, desenvolvimento e metodologias ágeis.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content glass-card">
+                            <span class="timeline-year" data-i18n="education_2_year">Concluído</span>
+                            <h3 data-i18n="education_2_title">Técnico em Análise e Desenvolvimento de Sistemas</h3>
+                            <p data-i18n="education_2_description">Colégio Estadual Adaile Maria Leite</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section section-bg-2">
+            <div class="content-wrapper">
+                <div class="section-title fade-in">
+                    <h2 data-i18n="experience_title">Experiência</h2>
+                    <p data-i18n="experience_subtitle">Onde eu trabalhei e o que aprendi</p>
+                </div>
+                <div class="experience-timeline-wrapper fade-in">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-card-wrapper">
+                            <div class="timeline-card glass-card">
+                                <h3 data-i18n="experience_1_title">Analista de Suporte</h3>
+                                <span class="timeline-company" data-i18n="experience_1_company">DB1 GROUP | CONSIGNET</span>
+                                <span class="timeline-date" data-i18n="experience_1_date">2024 - 2025</span>
+                                <p data-i18n="experience_1_description">Suporte técnico no setor público, com foco em atendimento ao cliente, resolução de chamados e acompanhamento de sistemas internos.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-item-left">
+                         <div class="timeline-card-wrapper">
+                            <div class="timeline-card glass-card">
+                                <h3 data-i18n="experience_2_title">Técnico de Hardware</h3>
+                                <span class="timeline-company" data-i18n="experience_2_company">Conserta Smart</span>
+                                <span class="timeline-date" data-i18n="experience_2_date">2024</span>
+                                <p data-i18n="experience_2_description">Diagnóstico e reparo de componentes eletrônicos, manutenção de placas, testes e orçamentos técnicos.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-card-wrapper">
+                            <div class="timeline-card glass-card">
+                                <h3 data-i18n="experience_3_title">Consultor de Vendas (E-commerce)</h3>
+                                <span class="timeline-company" data-i18n="experience_3_company">Conserta Smart</span>
+                                <span class="timeline-date" data-i18n="experience_3_date">2023 - 2024</span>
+                                <p data-i18n="experience_3_description">Atendimento ao cliente, suporte nas plataformas de venda online e acompanhamento de pedidos.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section id="skills" class="section section-bg-1">
+            <div class="content-wrapper">
+                <div class="section-title fade-in">
+                    <h2 data-i18n="skills_title">Expertise Técnica</h2>
+                    <p data-i18n="skills_subtitle">Um conjunto de ferramentas para desenvolvimento, suporte e gerenciamento de projetos.</p>
+                </div>
+                <div class="expertise-grid fade-in">
+                    <div class="expertise-card glass-card">
+                        <span class="material-icons-outlined">data_object</span>
+                        <h3 data-i18n="skills_1_title">Linguagens & Mobile</h3>
+                        <p data-i18n="skills_1_description">Java, C, Flutter, Desenvolvimento Mobile</p>
+                    </div>
+                    <div class="expertise-card glass-card">
+                        <span class="material-icons-outlined">dns</span>
+                        <h3 data-i18n="skills_2_title">Banco de Dados</h3>
+                        <p data-i18n="skills_2_description">PostgreSQL, MySQL, SQL Server</p>
+                    </div>
+                    <div class="expertise-card glass-card">
+                        <span class="material-icons-outlined">build_circle</span> 
+                        <h3 data-i18n="skills_3_title">Ferramentas & DevOps</h3>
+                        <p data-i18n="skills_3_description">Git, GitHub, Azure DevOps, Jira, CRM</p>
+                    </div>
+                    <div class="expertise-card glass-card">
+                        <span class="material-icons-outlined">design_services</span>
+                        <h3 data-i18n="skills_4_title">Design & Prototipagem</h3>
+                        <p data-i18n="skills_4_description">Prototipagem com Figma</p>
+                    </div>
+                    <div class="expertise-card glass-card">
+                        <span class="material-icons-outlined">groups</span>
+                        <h3 data-i18n="skills_5_title">Metodologias</h3>
+                        <p data-i18n="skills_5_description">Metodologias Ágeis, Scrum, Kanban, OKR</p>
+                    </div>
+                    <div class="expertise-card glass-card">
+                        <span class="material-icons-outlined">memory</span>
+                        <h3 data-i18n="skills_6_title">Hardware</h3>
+                        <p data-i18n="skills_6_description">Diagnóstico e Reparo de Hardware, Instalação de Sistemas</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="projects" class="section section-bg-2">
+            <div class="content-wrapper">
+                <div class="section-title fade-in">
+                    <h2 data-i18n="projects_title">Projetos Destacados</h2>
+                    <p data-i18n="projects_subtitle">Uma seleção de projetos acadêmicos e pessoais.</p>
+                </div>
+                <div class="projects-grid fade-in">
+                    <a href="#" class="project-card glass-card">
+                        <h3 data-i18n="project_1_title">MidoriBank</h3>
+                        <p data-i18n="project_1_description">Projeto de Simulador de sistema bancário em JAVA.</p>
+                    </a>
+                    <a href="#" class="project-card glass-card">
+                        <h3 data-i18n="project_2_title">Jogo De Xadrez</h3>
+                        <p data-i18n="project_2_description">Projeto de um jogo de Xadrez com partida local e com bot.</p>
+                    </a>
+                    <a href="#" class="project-card glass-card">
+                        <h3 data-i18n="project_3_title">Locadora de Veiculos</h3>
+                        <p data-i18n="project_3_description">Projeto de um sistema de locação de veiculos em C.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section section-bg-1">
+            <div class="content-wrapper">
+                <div class="section-title fade-in">
+                    <h2 data-i18n="contact_title">Entre em Contato</h2>
+                    <p data-i18n="contact_subtitle">Interessado em trabalhar juntos? Vamos discutir seu projeto.</p>
+                </div>
+
+                <div class="contact-card-container glass-card fade-in">
+                    <div class="contact-grid">
+                        <a href="mailto:jpvs06x0805@gmail.com" class="contact-item">
+                            <div class="contact-icon-wrapper">
+                                <span class="material-icons-outlined">email</span>
+                            </div>
+                            <div class="contact-text-wrapper">
+                                <span class="contact-label" data-i18n="contact_email_label">Email</span>
+                                <span class="contact-info">jpvs06x0805@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="https://github.com/jampdroRomano" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
+                            <div class="contact-icon-wrapper">
+                                <span class="material-icons-outlined">code</span> </div>
+                            <div class="contact-text-wrapper">
+                                <span class="contact-label" data-i18n="contact_github_label">GitHub</span>
+                                <span class="contact-info">@jampdroRomano</span>
+                            </div>
+                        </a>
+                        <a href="https://linkedin.com/in/jampdroromano" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
+                            <div class="contact-icon-wrapper">
+                                <span class="material-icons-outlined">person</span> </div>
+                            <div class="contact-text-wrapper">
+                                <span class="contact-label" data-i18n="contact_linkedin_label">LinkedIn</span>
+                                <span class="contact-info">in/jampdroromano</span>
+                            </div>
+                        </a>
+                        <a href="https://wa.me/5544991147517" target="_blank" rel="noopener noreferrer"
+                            class="contact-item">
+                            <div class="contact-icon-wrapper">
+                                <span class="material-icons-outlined">chat</span> </div>
+                            <div class="contact-text-wrapper">
+                                <span class="contact-label" data-i18n="contact_whatsapp_label">WhatsApp</span>
+                                <span class="contact-info" data-i18n="contact_whatsapp_info">Me mande uma mensagem</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="fade-in">
+        <p data-i18n="footer_text">© 2025 João Romano. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
