@@ -1,13 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-    /**
-     * Initializes and manages the interactive elements of the portfolio page.
-     */
     const AppController = {
         
-        /**
-         * Initializes all functionalities.
-         */
+        typingTimeout: null,
+
         async init() {
             this.createParticles();
             this.initFadeInObserver();
@@ -15,13 +11,10 @@ document.addEventListener("DOMContentLoaded", () => {
             this.initActiveLinkObserver();
             this.initThemeToggle();
             this.initMobileMenu();
-            await this.initLanguageSelector();
+            await this.initLanguageSelector(); 
             this.initClickOutsideClosers();
         },
 
-        /**
-         * Creates and animates background particles.
-         */
         createParticles() {
             const particleContainer = document.getElementById('global-particle-background');
             if (!particleContainer) return;
@@ -50,9 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         },
 
-        /**
-         * Sets up an IntersectionObserver to fade in elements as they become visible.
-         */
         initFadeInObserver() {
             const fadeInObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -65,9 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
             document.querySelectorAll('.fade-in').forEach(el => fadeInObserver.observe(el));
         },
 
-        /**
-         * Attaches smooth scroll behavior to all anchor links pointing to sections.
-         */
         initSmoothScroll() {
             document.querySelectorAll('a[href^="#"]').forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -77,10 +64,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         },
 
-        /**
-         * Scrolls smoothly to a target element on the page.
-         * @param {string} targetId - The ID of the target element (e.g., "#about").
-         */
         smoothScrollTo(targetId) {
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
@@ -95,9 +78,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         },
 
-        /**
-         * Sets up an IntersectionObserver to update the active navigation link based on scroll position.
-         */
         initActiveLinkObserver() {
             const sections = document.querySelectorAll('section[id]');
             const navActiveObserver = new IntersectionObserver((entries) => {
@@ -114,9 +94,6 @@ document.addEventListener("DOMContentLoaded", () => {
             sections.forEach(section => navActiveObserver.observe(section));
         },
 
-        /**
-         * Manages the theme (dark/light mode) toggle functionality.
-         */
         initThemeToggle() {
             const themeToggle = document.getElementById('theme-toggle');
             const body = document.body;
@@ -135,9 +112,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         },
 
-        /**
-         * Handles the mobile navigation menu toggle and link clicks.
-         */
         initMobileMenu() {
             const menuToggleButton = document.querySelector('.menu-toggle');
             const mobileMenu = document.getElementById('mobile-menu');
@@ -153,14 +127,11 @@ document.addEventListener("DOMContentLoaded", () => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.remove('open');
                     menuToggleButton.querySelector('.material-icons-outlined').textContent = 'menu';
-                    // Smooth scroll is already handled by initSmoothScroll
+                    
                 });
             });
         },
 
-        /**
-         * Manages the language selection dropdown.
-         */
         async initLanguageSelector() {
             const langSelector = document.querySelector('.language-selector');
             if (!langSelector) return;
@@ -169,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const langOptions = langSelector.querySelectorAll('.lang-dropdown button');
             
             const savedLang = localStorage.getItem('language') || 'pt';
-            await this.loadLanguage(savedLang);
+            await this.loadLanguage(savedLang); 
 
             langToggleButton.addEventListener('click', (e) => {
                 e.stopPropagation();
@@ -179,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
             langOptions.forEach(option => {
                 option.addEventListener('click', async (e) => {
                     const lang = e.target.getAttribute('data-lang');
-                    await this.loadLanguage(lang);
+                    await this.loadLanguage(lang); 
                     
                     langOptions.forEach(opt => opt.classList.remove('active'));
                     e.target.classList.add('active');
@@ -197,10 +168,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
                 const translations = await response.json();
                 this.applyTranslations(translations);
+                
+                this.startTypingEffect(); 
+
                 localStorage.setItem('language', lang);
                 document.documentElement.lang = lang;
 
-                // Update active button
                 const langOptions = document.querySelectorAll('.language-selector .lang-dropdown button');
                 langOptions.forEach(opt => {
                     opt.classList.toggle('active', opt.getAttribute('data-lang') === lang);
@@ -219,10 +192,64 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         },
+        
+        startTypingEffect() {
+            const roleListI18nElement = document.getElementById('role-list-i18n');
+            const typedTextElement = document.getElementById('typed-role-text');
 
-        /**
-         * Adds a global click listener to close open menus (mobile nav, language dropdown).
-         */
+            if (!roleListI18nElement || !typedTextElement) return;
+            
+            if (this.typingTimeout) {
+                clearTimeout(this.typingTimeout);
+                this.typingTimeout = null;
+            }
+            typedTextElement.textContent = ''; 
+
+            const rolesString = roleListI18nElement.textContent;
+            const roles = rolesString.split(',')
+                                      .map(role => role.trim())
+                                      .filter(role => role.length > 0);
+
+            if (roles.length === 0) return;
+
+            let roleIndex = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 150; 
+            const pauseDuration = 1500; 
+            
+            const self = this; 
+
+            function typeWriter() {
+                const currentRole = roles[roleIndex];
+
+                if (isDeleting) {
+                    typedTextElement.textContent = currentRole.substring(0, charIndex - 1);
+                    charIndex--;
+                    typingSpeed = 75; 
+                } else {
+                    typedTextElement.textContent = currentRole.substring(0, charIndex + 1);
+                    charIndex++;
+                    typingSpeed = 150; 
+                }
+
+                if (!isDeleting && charIndex === currentRole.length) {
+                    isDeleting = true;
+                    self.typingTimeout = setTimeout(typeWriter, pauseDuration); 
+                    return;
+
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    roleIndex = (roleIndex + 1) % roles.length; 
+                    typingSpeed = 150; 
+                }
+                
+                self.typingTimeout = setTimeout(typeWriter, typingSpeed);
+            }
+
+            typeWriter();
+        },
+
         initClickOutsideClosers() {
             const mobileMenu = document.getElementById('mobile-menu');
             const menuToggleButton = document.querySelector('.menu-toggle');

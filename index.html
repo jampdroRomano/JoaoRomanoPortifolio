@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="assets/favicon.png" />
     <title>João Romano - Desenvolvedor</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body data-theme="dark">
 
     <div id="global-particle-background"></div>
@@ -24,14 +28,14 @@
             <a href="#experience" data-i18n="navbar_experience">Experiência</a>
             <a href="#skills" data-i18n="navbar_skills">Tecnologias</a>
             <a href="#projects" data-i18n="navbar_projects">Projetos</a>
-            <a href="#contact" data-i18n="navbar_contact">Contato</a> 
+            <a href="#contact" data-i18n="navbar_contact">Contato</a>
         </nav>
-        
+
         <div class="navbar-actions">
             <button class="icon-button" id="theme-toggle" aria-label="Alternar tema">
                 <span class="material-icons-outlined">brightness_6</span>
             </button>
-            
+
             <div class="language-selector desktop-only">
                 <button class="icon-button" id="lang-toggle" aria-label="Mudar idioma">
                     <span class="material-icons-outlined">language</span>
@@ -55,21 +59,27 @@
         <a href="#experience" data-i18n="navbar_experience">Experiência</a>
         <a href="#skills" data-i18n="navbar_skills">Tecnologias</a>
         <a href="#projects" data-i18n="navbar_projects">Projetos</a>
-        <a href="#contact" data-i18n="navbar_contact">Contato</a> 
+        <a href="#contact" data-i18n="navbar_contact">Contato</a>
     </nav>
 
     <main>
         <section id="profile" class="section profile-hero section-bg-1">
             <div class="content-wrapper profile-hero-content">
-                <div class="profile-text-area"> <div class="profile-role-small">
-                        <span data-i18n="profile_role">Suporte Técnico & Desenvolvimento</span>
+                <div class="profile-text-area">
+                    <div class="profile-role-small">
+                        <span data-i18n="profile_role">Desenvolvimento & Analista de Suporte </span>
                     </div>
                     <h1 class="fade-in" data-i18n="profile_name">João Romano</h1>
-                    <p class="profile-tagline fade-in" data-i18n="profile_tagline">
-                        Profissional focado em atendimento ao cliente e suporte técnico.
+
+                    <p class="profile-tagline fade-in">
+                        <span id="role-list-i18n" data-i18n="profile_role_list" style="display: none;">Desenvolvedor,
+                            Engenharia de Software, Analista de Suporte</span>
+                        <span id="typed-role-text"></span>
                     </p>
+
                     <p class="profile-description fade-in" data-i18n="profile_description">
-                        Experiência com ferramentas de CRM, análise de chamados e resolução de problemas na causa raiz. Conhecimentos em Java, C, Flutter, Git e metodologias ágeis.
+                        Experiência com ferramentas de CRM, análise de chamados e resolução de problemas na causa raiz.
+                        Conhecimentos em Java, C, Flutter, Git e metodologias ágeis.
                     </p>
                     <a href="#contact" class="contact-text-link fade-in" data-i18n="profile_contact">
                         Entre em contato <span class="material-icons-outlined">arrow_right_alt</span>
@@ -88,8 +98,13 @@
                         <span class="material-icons-outlined">person_outline</span>
                         <h2 data-i18n="about_title">Sobre Mim</h2>
                     </div>
-                    <p data-i18n="about_p1">Profissional com experiência em atendimento ao cliente e suporte técnico, atuando com ferramentas de CRM, análise e resolução de chamados, documentação técnica e resolução de problemas na causa raiz. Conhecimento em negociação, comunicação eficaz e trabalho em equipe.</p>
-                    <p data-i18n="about_p2">Vivência com lógica de programação, Java, C, Flutter, Protatipagem com Figma, PostgreSQL, MySQL, SQL Server, versionamento com Git/GitHub e metodologias ágeis (Scrum/Kanban). Experiência em gestão de chamados e projetos utilizando Azure DevOps e Jira.</p>
+                    <p data-i18n="about_p1">Profissional com experiência em atendimento ao cliente e suporte técnico,
+                        atuando com ferramentas de CRM, análise e resolução de chamados, documentação técnica e
+                        resolução de problemas na causa raiz. Conhecimento em negociação, comunicação eficaz e trabalho
+                        em equipe.</p>
+                    <p data-i18n="about_p2">Vivência com lógica de programação, Java, C, Flutter, Protatipagem com
+                        Figma, PostgreSQL, MySQL, SQL Server, versionamento com Git/GitHub e metodologias ágeis
+                        (Scrum/Kanban). Experiência em gestão de chamados e projetos utilizando Azure DevOps e Jira.</p>
                     <div class="tag-grid">
                         <span class="tag-chip" data-i18n="about_tag1">🎯 Comunicação Eficaz</span>
                         <span class="tag-chip" data-i18n="about_tag2">🤝 Trabalho em Equipe</span>
@@ -112,7 +127,8 @@
                         <div class="timeline-content glass-card">
                             <span class="timeline-year" data-i18n="education_1_year">2025 - 2028</span>
                             <h3 data-i18n="education_1_title">Bacharelado em Engenharia de Software</h3>
-                            <p data-i18n="education_1_description">UNICV - Focado em arquitetura de software, desenvolvimento e metodologias ágeis.</p>
+                            <p data-i18n="education_1_description">UNICV - Focado em arquitetura de software,
+                                desenvolvimento e metodologias ágeis.</p>
                         </div>
                     </div>
                     <div class="timeline-item">
@@ -129,31 +145,50 @@
         <section id="experience" class="section section-bg-2">
             <div class="content-wrapper">
                 <div class="section-title fade-in">
-                    <h2 data-i18n="experience_title">Experiência</h2>
-                    <p data-i18n="experience_subtitle">Onde eu trabalhei e o que aprendi</p>
+                    <h2 data-i18n="experience_title">Experiência Profissional</h2>
+                    <p data-i18n="experience_subtitle">Trajetória de Carreira e Contribuições.</p>
                 </div>
                 <div class="experience-timeline-wrapper fade-in">
                     <div class="timeline-line"></div>
+
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-card-wrapper">
+                            <div class="timeline-card glass-card">
+                                <h3 data-i18n="experience_4_title">Desenvolvedor Mobile</h3>
+                                <span class="timeline-company" data-i18n="experience_4_company">UNICV | SMART
+                                    QUIZ</span>
+                                <span class="timeline-date" data-i18n="experience_4_date">2025</span>
+                                <p data-i18n="experience_4_description">Desenvolvimento de um aplicativo móvel de quiz
+                                    em Flutter para simulação de exames institucionais (como ENADE), incluindo
+                                    funcionalidades completas de cadastro de provas e questões.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-dot"></div>
+                    </div>
 
                     <div class="timeline-item timeline-item-right">
                         <div class="timeline-card-wrapper">
                             <div class="timeline-card glass-card">
                                 <h3 data-i18n="experience_1_title">Analista de Suporte</h3>
-                                <span class="timeline-company" data-i18n="experience_1_company">DB1 GROUP | CONSIGNET</span>
+                                <span class="timeline-company" data-i18n="experience_1_company">DB1 GROUP |
+                                    CONSIGNET</span>
                                 <span class="timeline-date" data-i18n="experience_1_date">2024 - 2025</span>
-                                <p data-i18n="experience_1_description">Suporte técnico no setor público, com foco em atendimento ao cliente, resolução de chamados e acompanhamento de sistemas internos.</p>
+                                <p data-i18n="experience_1_description">Suporte técnico no setor público, com foco em
+                                    atendimento ao cliente, resolução de chamados e acompanhamento de sistemas internos.
+                                </p>
                             </div>
                         </div>
                         <div class="timeline-dot"></div>
                     </div>
 
                     <div class="timeline-item timeline-item-left">
-                         <div class="timeline-card-wrapper">
+                        <div class="timeline-card-wrapper">
                             <div class="timeline-card glass-card">
                                 <h3 data-i18n="experience_2_title">Técnico de Hardware</h3>
                                 <span class="timeline-company" data-i18n="experience_2_company">Conserta Smart</span>
                                 <span class="timeline-date" data-i18n="experience_2_date">2024</span>
-                                <p data-i18n="experience_2_description">Diagnóstico e reparo de componentes eletrônicos, manutenção de placas, testes e orçamentos técnicos.</p>
+                                <p data-i18n="experience_2_description">Diagnóstico e reparo de componentes eletrônicos,
+                                    manutenção de placas, testes e orçamentos técnicos.</p>
                             </div>
                         </div>
                         <div class="timeline-dot"></div>
@@ -165,7 +200,8 @@
                                 <h3 data-i18n="experience_3_title">Consultor de Vendas (E-commerce)</h3>
                                 <span class="timeline-company" data-i18n="experience_3_company">Conserta Smart</span>
                                 <span class="timeline-date" data-i18n="experience_3_date">2023 - 2024</span>
-                                <p data-i18n="experience_3_description">Atendimento ao cliente, suporte nas plataformas de venda online e acompanhamento de pedidos.</p>
+                                <p data-i18n="experience_3_description">Atendimento ao cliente, suporte nas plataformas
+                                    de venda online e acompanhamento de pedidos.</p>
                             </div>
                         </div>
                         <div class="timeline-dot"></div>
@@ -179,8 +215,8 @@
         <section id="skills" class="section section-bg-1">
             <div class="content-wrapper">
                 <div class="section-title fade-in">
-                    <h2 data-i18n="skills_title">Expertise Técnica</h2>
-                    <p data-i18n="skills_subtitle">Um conjunto de ferramentas para desenvolvimento, suporte e gerenciamento de projetos.</p>
+                    <h2 data-i18n="skills_title">Tecnologias</h2>
+                    <p data-i18n="skills_subtitle">Um conjunto de ferramentas que utilizo</p>
                 </div>
                 <div class="expertise-grid fade-in">
                     <div class="expertise-card glass-card">
@@ -194,7 +230,7 @@
                         <p data-i18n="skills_2_description">PostgreSQL, MySQL, SQL Server</p>
                     </div>
                     <div class="expertise-card glass-card">
-                        <span class="material-icons-outlined">build_circle</span> 
+                        <span class="material-icons-outlined">build_circle</span>
                         <h3 data-i18n="skills_3_title">Ferramentas & DevOps</h3>
                         <p data-i18n="skills_3_description">Git, GitHub, Azure DevOps, Jira, CRM</p>
                     </div>
@@ -225,18 +261,79 @@
                     <p data-i18n="projects_subtitle">Uma seleção de projetos acadêmicos e pessoais.</p>
                 </div>
                 <div class="projects-grid fade-in">
-                    <a href="#" class="project-card glass-card">
-                        <h3 data-i18n="project_1_title">MidoriBank</h3>
-                        <p data-i18n="project_1_description">Projeto de Simulador de sistema bancário em JAVA.</p>
-                    </a>
-                    <a href="#" class="project-card glass-card">
-                        <h3 data-i18n="project_2_title">Jogo De Xadrez</h3>
-                        <p data-i18n="project_2_description">Projeto de um jogo de Xadrez com partida local e com bot.</p>
-                    </a>
-                    <a href="#" class="project-card glass-card">
-                        <h3 data-i18n="project_3_title">Locadora de Veiculos</h3>
-                        <p data-i18n="project_3_description">Projeto de um sistema de locação de veiculos em C.</p>
-                    </a>
+
+                    <div class="project-card-wrapper">
+                        <div class="project-card glass-card">
+                            <div class="project-image-container">
+                                <img src="assets/MidoriBank.png" alt="MidoriBank Project"
+                                    class="project-image">
+                                <div class="project-hover-buttons">
+                                    <a href="https://github.com/jampdroRomano/MidoribankSystem.git" class="icon-button" aria-label="Ver Projeto">
+                                        <span class="material-icons-outlined">link</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 data-i18n="project_1_title">MidoriBank</h3>
+                                <p data-i18n="project_1_description">Projeto de Simulador de sistema bancário em JAVA.
+                                </p>
+                                <div class="project-stack-tags">
+                                    <span class="tag-chip">JAVA</span>
+                                    <span class="tag-chip">JavaFX</span>
+                                    <span class="tag-chip">MySql</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-wrapper">
+                        <div class="project-card glass-card">
+                            <div class="project-image-container">
+                                <img src="assets/ChessMaster.png" alt="Jogo de Xadrez Project"
+                                    class="project-image">
+                                <div class="project-hover-buttons">
+                                    <a href="https://github.com/jampdroRomano/ChessMasterFX.git" class="icon-button" aria-label="Ver Projeto">
+                                        <span class="material-icons-outlined">link</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 data-i18n="project_2_title">Jogo De Xadrez</h3>
+                                <p data-i18n="project_2_description">Projeto de um jogo de Xadrez com partida local e
+                                    com bot.</p>
+                                <div class="project-stack-tags">
+                                    <span class="tag-chip">Java</span>
+                                    <span class="tag-chip">JavaFX</span>
+                                    <span class="tag-chip">Maven</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card-wrapper">
+                        <div class="project-card glass-card">
+                            <div class="project-image-container">
+                                <img src="assets/LocadoraVeiculos.png" alt="Locadora de Veiculos Project"
+                                    class="project-image">
+                                <div class="project-hover-buttons">
+                                    <a href="https://github.com/jampdroRomano/Locadora_Veiculos.git" class="icon-button" aria-label="Ver Projeto">
+                                        <span class="material-icons-outlined">link</span>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3 data-i18n="project_3_title">Locadora de Veiculos</h3>
+                                <p data-i18n="project_3_description">Projeto de um sistema de locação de veiculos em C.
+                                </p>
+                                <div class="project-stack-tags">
+                                    <span class="tag-chip">C</span>
+                                    <span class="tag-chip">GCC</span>
+                                    <span class="tag-chip">Arquitetura Modular</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -245,7 +342,7 @@
             <div class="content-wrapper">
                 <div class="section-title fade-in">
                     <h2 data-i18n="contact_title">Entre em Contato</h2>
-                    <p data-i18n="contact_subtitle">Interessado em trabalhar juntos? Vamos discutir seu projeto.</p>
+                    <p data-i18n="contact_subtitle">Interessado em trabalhar juntos ou trocar conhecimento? Vamos conversar!</p>
                 </div>
 
                 <div class="contact-card-container glass-card fade-in">
@@ -262,7 +359,8 @@
                         <a href="https://github.com/jampdroRomano" target="_blank" rel="noopener noreferrer"
                             class="contact-item">
                             <div class="contact-icon-wrapper">
-                                <span class="material-icons-outlined">code</span> </div>
+                                <span class="material-icons-outlined">code</span>
+                            </div>
                             <div class="contact-text-wrapper">
                                 <span class="contact-label" data-i18n="contact_github_label">GitHub</span>
                                 <span class="contact-info">@jampdroRomano</span>
@@ -271,7 +369,8 @@
                         <a href="https://linkedin.com/in/jampdroromano" target="_blank" rel="noopener noreferrer"
                             class="contact-item">
                             <div class="contact-icon-wrapper">
-                                <span class="material-icons-outlined">person</span> </div>
+                                <span class="material-icons-outlined">person</span>
+                            </div>
                             <div class="contact-text-wrapper">
                                 <span class="contact-label" data-i18n="contact_linkedin_label">LinkedIn</span>
                                 <span class="contact-info">in/jampdroromano</span>
@@ -280,10 +379,12 @@
                         <a href="https://wa.me/5544991147517" target="_blank" rel="noopener noreferrer"
                             class="contact-item">
                             <div class="contact-icon-wrapper">
-                                <span class="material-icons-outlined">chat</span> </div>
+                                <span class="material-icons-outlined">chat</span>
+                            </div>
                             <div class="contact-text-wrapper">
                                 <span class="contact-label" data-i18n="contact_whatsapp_label">WhatsApp</span>
-                                <span class="contact-info" data-i18n="contact_whatsapp_info">Me mande uma mensagem</span>
+                                <span class="contact-info" data-i18n="contact_whatsapp_info">Me mande uma
+                                    mensagem</span>
                             </div>
                         </a>
                     </div>
@@ -298,4 +399,5 @@
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
