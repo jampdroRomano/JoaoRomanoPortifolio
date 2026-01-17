@@ -1,0 +1,55 @@
+.glass-card {
+    background: var(--glassDark);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid var(--glassBorder);
+    border-radius: 24px;
+    padding: 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease, border 0.3s ease;
+}
+
+.gradient-border {
+    border: 1px solid rgba(153, 157, 158, 0.3);
+    background-origin: padding-box, border-box;
+    background-clip: padding-box, border-box;
+}
+
+.tag-chip {
+    background: rgba(29, 245, 22, 0.15);
+    border: 1px solid rgba(29, 245, 22, 0.3);
+    color: var(--textLight);
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.tag-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.contact-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--neonBlue);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.3s ease;
+    padding: 8px 0;
+}
+
+.contact-text-link:hover {
+    color: var(--neonPurple);
+    transform: translateX(5px);
+}
+
+.contact-text-link .material-icons-outlined {
+    font-size: 24px;
+    margin-left: 5px;
+}
+

@@ -1007,6 +1007,11 @@ footer p {
     font-size: 28px;
 }
 
+.project-hover-buttons .icon-button svg {
+    width: 28px;
+    height: 28px;
+}
+
 .project-hover-buttons .icon-button:hover {
     background: var(--neonBlue);
     color: var(--darkBackground);
