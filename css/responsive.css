@@ -1,0 +1,171 @@
+@media (max-width: 768px) {
+    body {
+        padding-top: 70px;
+    }
+
+    #navbar {
+        width: 95%;
+        padding: 0 15px;
+        height: 50px;
+        top: 10px;
+        justify-content: space-between;
+    }
+
+    #navbar .nav-menu {
+        display: none;
+    }
+
+    .navbar-actions {
+        gap: 5px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .icon-button {
+        padding: 6px;
+    }
+
+    .icon-button .material-icons-outlined {
+        font-size: 26px;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .content-wrapper {
+        padding: 0 15px;
+    }
+
+    .glass-card {
+        padding: 20px;
+    }
+
+    .section-title {
+        margin-bottom: 40px;
+    }
+
+    #profile h1,
+    .section-title h2,
+    .about-title-flex h2 {
+        font-size: 2rem;
+    }
+
+    #profile.section {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .profile-hero-content {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+        min-height: auto;
+    }
+
+    .profile-text-area {
+        text-align: center;
+        max-width: 100%;
+    }
+
+    #profile h1,
+    #profile .profile-tagline,
+    #profile .profile-description {
+        text-align: center;
+    }
+
+    #profile .profile-description {
+        margin: 0 auto 30px auto;
+    }
+
+    .contact-text-link {
+        justify-content: center;
+    }
+
+    .profile-image-container {
+        width: 200px;
+        height: 200px;
+        margin: 0;
+    }
+
+    .education-timeline {
+        padding-left: 0;
+    }
+
+    .education-timeline::before {
+        display: none;
+    }
+
+    .education-timeline .timeline-item {
+        padding-left: 0;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    .education-timeline .timeline-content {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .experience-timeline-wrapper {
+        margin-top: 40px;
+        padding: 0;
+    }
+
+    .experience-timeline-wrapper .timeline-line {
+        left: 10px;
+        transform: none;
+        display: block;
+    }
+
+    .experience-timeline-wrapper .timeline-dot {
+        left: 10px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        display: block;
+    }
+
+    .experience-timeline-wrapper .timeline-item {
+        justify-content: flex-start;
+        margin: 40px 0;
+        padding: 0 0 0 35px;
+        display: block;
+    }
+
+    .experience-timeline-wrapper .timeline-card-wrapper {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .experience-timeline-wrapper .timeline-item-left .timeline-card-wrapper,
+    .experience-timeline-wrapper .timeline-item-right .timeline-card-wrapper {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+    }
+
+    .contact-card-container {
+        padding: 25px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-image-container {
+        border-radius: 16px 16px 0 0;
+    }
+
+    .project-card {
+        border-radius: 16px;
+    }
+}
+

@@ -1,0 +1,27 @@
+:root {
+    --darkBackground: #090909;
+    --cardDark: #1A1A1A;
+    --textLight: #F5F5F5;
+    --textDark: #090909;
+    --neonBlue: #1DF516;
+    --neonPurple: #9FE80D;
+    --neonPink: #0E9F00;
+    --glassDark: rgba(26, 26, 26, 0.7);
+    --glassLight: rgba(255, 255, 255, 0.1);
+    --glassBorder: rgba(255, 255, 255, 0.1);
+    --font-primary: 'Poppins', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+    --section-bg-dark: #0F0F10;
+}
+
+body[data-theme="light"] {
+    --darkBackground: #F5F5F5;
+    --cardDark: #FFFFFF;
+    --textLight: #090909;
+    --textDark: #F5F5F5;
+    --glassDark: rgba(255, 255, 255, 0.7);
+    --glassLight: rgba(26, 26, 26, 0.1);
+    --glassBorder: rgba(0, 0, 0, 0.1);
+    --section-bg-dark: #EAEAEA;
+}
+
